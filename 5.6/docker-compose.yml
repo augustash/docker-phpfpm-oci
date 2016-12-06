@@ -1,0 +1,13 @@
+version: "2"
+services:
+  phpfpm-oci:
+    build:
+      context: .
+    image: augustash/phpfpm-oci:5.6.28
+    labels:
+      - "com.augustash.description=August Ash PHP-FPM OCI Image"
+      - "com.augustash.development-only"
+    expose:
+      - 9000
+    env_file:
+      - phpfpm.env
